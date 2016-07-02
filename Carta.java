@@ -1,33 +1,45 @@
 
 /**
- * Write a description of class Carta here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *                                
  */
-public class Carta
-{
-    // instance variables - replace the example below with your own
-    private int x;
+class Carta {
 
-    /**
-     * Constructor for objects of class Carta
-     */
-    public Carta()
-    {
-        // initialise instance variables
-        x = 0;
+    private int valor;
+    private String palo;
+
+    public Carta(int valor, String palo) {
+        this.valor = valor;
+        this.palo = palo;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public int getValor() {
+        return valor;
     }
+
+    public String getPalo() {
+        return palo;
+    }  
+
+    public String getNombre(){
+        String carta = "";
+        if(valor == 1){
+            carta = "As " +palo;
+        }
+        else if(valor == 11){
+            carta = "J " +palo;
+        }
+        else if(valor == 12){
+            carta = "Q " +palo;
+        }
+        else if(valor == 13){
+            carta = "K " +palo;
+        }
+        else{ 
+            carta = valor+ " " +palo;
+        }
+        return carta;
+    }
+
 }
+
+
