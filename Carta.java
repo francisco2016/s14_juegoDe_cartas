@@ -1,6 +1,7 @@
 
 /**
- *                                
+ *    autor Francisco.
+ *    02 / 06 / 2016
  */
 class Carta {
 
@@ -23,23 +24,40 @@ class Carta {
     public String getNombre(){
         String carta = "";
         if(valor == 1){
-            carta = "As " +palo;
+            carta = "As de " +palo;
         }
         else if(valor == 11){
-            carta = "J " +palo;
+            carta = "J de " +palo;
         }
         else if(valor == 12){
-            carta = "Q " +palo;
+            carta = "Q de" +palo;
         }
         else if(valor == 13){
-            carta = "K " +palo;
+            carta = "K de " +palo;
         }
         else{ 
-            carta = valor+ " " +palo;
+            carta = valor+ " de " +palo;
         }
         return carta;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
