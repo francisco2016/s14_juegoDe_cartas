@@ -1,33 +1,73 @@
+import java.util.ArrayList;
 
 /**
- * Write a description of class Juagador here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Francisco
  */
 public class Juagador
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private int idJugador;
+    //Colección para almacenar las cartas que vaya recibiendo el jugador.
+    private ArrayList<Carta> cartaJ; 
     /**
      * Constructor for objects of class Juagador
      */
-    public Juagador()
+    public Juagador(int idJugador)
     {
-        // initialise instance variables
-        x = 0;
+        this.idJugador =  idJugador;
+        cartaJ = new ArrayList<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * este método crea un objeto jugador que no tiene cartas en su poder con el identificador indicado como parámetro.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void jugador(int id){
+        idJugador = id;
     }
+    
+    /**
+     *devuelve el identificador del jugador.
+     */
+    public int getId(){
+        return idJugador;
+    }
+    
+    /**
+     *agrega la carta unaCarta a las que posee el jugador.
+     */
+    public void recibirCarta(Carta unaCarta){
+        cartaJ.add(unaCarta);
+    }
+
+    /**
+     *devuelve una colección de cadenas con los nombres de las cartas que el jugador ha recibido.
+     */
+    public ArrayList<String> cartasQueTieneEnLaMano(){
+        //Declaro una VL. de tipo ArrayList para almacenar las cartas que reciba.
+        ArrayList<String> cartasRecibidas = new ArrayList<>();
+        for(Carta cartaEnLaMano: cartaJ){
+            cartasRecibidas.add(cartaEnLaMano.getNombre());
+        }
+        return cartasRecibidas;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
