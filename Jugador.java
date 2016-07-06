@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Francisco
  */
-public class Juagador
+public class Jugador
 {
     private int idJugador;
     //Colección para almacenar las cartas que vaya recibiendo el jugador.
@@ -11,7 +11,7 @@ public class Juagador
     /**
      * Constructor for objects of class Juagador
      */
-    public Juagador(int idJugador)
+    public Jugador(int idJugador)
     {
         this.idJugador =  idJugador;
         cartaJ = new ArrayList<>();
